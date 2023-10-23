@@ -46,24 +46,24 @@ VerifyTimeout = 10
 
 启动web服务后, 默认配置下会开启 http://127.0.0.1:5010 的html网页:
 
-| url  | method | Description      | params                                      |
-| ---- | ------ | ---------------- | ------------------------------------------- |
-| /get | GET    | 随机获取一个代理 | 可选参数: `?type=https` 过滤支持https的代理 |
-| /all | GET    | 获取所有代理     | 可选参数: `?type=https` 过滤支持https的代理 |
+| url  | method | Description      | params                                                       |
+| ---- | ------ | ---------------- | ------------------------------------------------------------ |
+| /get | GET    | 随机获取一个代理 | 可选参数: `?type=https` 过滤支持https的代理, `?type=sock5` 过滤支持sock5的代理 |
+| /all | GET    | 获取所有代理     | 可选参数: `?type=https` 过滤支持https的代理, `?type=sock5` 过滤支持sock5的代理 |
 
 
 * Api
 
 默认配置下会开启 http://127.0.0.1:5010 的api接口服务:
 
-| api         | method | Description        | params                                      |
-| ----------- | ------ | ------------------ | ------------------------------------------- |
-| /api        | GET    | api介绍            | None                                        |
-| /api/get    | GET    | 随机获取一个代理   | 可选参数: `?type=https` 过滤支持https的代理 |
-| /api/pop    | GET    | 获取并删除一个代理 | 可选参数: `?type=https` 过滤支持https的代理 |
-| /api/all    | GET    | 获取所有代理       | 可选参数: `?type=https` 过滤支持https的代理 |
-| /api/count  | GET    | 查看代理数量       | None                                        |
-| /api/delete | GET    | 删除代理           | `?proxy=host:ip`                            |
+| api         | method | Description        | params                                                       |
+| ----------- | ------ | ------------------ | ------------------------------------------------------------ |
+| /api        | GET    | api介绍            | None                                                         |
+| /api/get    | GET    | 随机获取一个代理   | 可选参数: `?type=https` 过滤支持https的代理, `?type=sock5` 过滤支持sock5的代理 |
+| /api/pop    | GET    | 获取并删除一个代理 | 可选参数: `?type=https` 过滤支持https的代理, `?type=sock5` 过滤支持sock5的代理 |
+| /api/all    | GET    | 获取所有代理       | 可选参数: `?type=https` 过滤支持https的代理, `?type=sock5` 过滤支持sock5的代理 |
+| /api/count  | GET    | 查看代理数量       | None                                                         |
+| /api/delete | GET    | 删除代理           | `?proxy=host:ip`                                             |
 
 
 ### 免费代理源

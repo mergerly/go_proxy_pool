@@ -170,7 +170,9 @@ func getAllProxies(w http.ResponseWriter, r *http.Request) {
 	queryType := r.URL.Query().Get("type")
 	proxyType := 0
 	if queryType == "https" {
-		proxyType = 17
+		proxyType = 0x10
+	} else if queryType == "sock5" {
+		proxyType = 0x100
 	}
 	var proxies []*ProxyItem
 	if proxyType > 0 {
@@ -190,6 +192,8 @@ func getProxy(w http.ResponseWriter, r *http.Request) {
 	proxyType := 0
 	if queryType == "https" {
 		proxyType = 0x10
+	} else if queryType == "sock5" {
+		proxyType = 0x100
 	}
 	var proxy *ProxyItem
 	if proxyType > 0 {
